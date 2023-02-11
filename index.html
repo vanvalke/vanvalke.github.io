@@ -1,11 +1,60 @@
-<html lang="en">
-<head>
+<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
-</head>
-<body>
-    <h1>Ethan VanValkenburg</h1>
-    <p>just a little bit of text</p>
-</body>
+    <title>My Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+      /* Add some styling to make the page look better */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      header h1 {
+        text-align: center;
+      }
+      main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 800px;
+      }
+      main p {
+        width: 60%;
+        text-align: justify;
+      }
+      main img {
+        width: 30%;
+        height: auto;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ethan VanValkenburg</h1>
+    </header>
+    <main>
+      <div id="about-me">
+        <h2>About Me</h2>
+        <img src="ethanjpg" alt="This is me">
+        <p>Hi, my name is Ethan VanValkenburg. I am a Student. I have a passion for Community Ecology. I am excited to share my experiences and thoughts with you through this website.</p>
+      </div>
+      <div id="recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+          <li>Post 1</li>
+          <li>Post 2</li>
+          <li>Post 3</li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright &copy; Ethan VanValkenburg 2023</p>
+    </footer>
+  </body>
 </html>
