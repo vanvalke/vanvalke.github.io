@@ -8,12 +8,13 @@ body {
 
   .container {
     display: flex;
+    background-image: url("/RMBL.jpg");
+    background-size: cover;
   }
 
   .container p {
     margin: 6px;
   }
-
 
   .container p a {
     padding-right: 12px;
