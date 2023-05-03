@@ -8,7 +8,7 @@ body {
 
   .container {
     display: flex;
-    background-image: url("/RMBL.jpg");
+    background-image: url("RMBL.jpg");
     background-size: cover;
   }
 
