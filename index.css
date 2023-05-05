@@ -1,63 +1,85 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-    font-family: "Helvetica", sans-serif;
-    margin: 0;
-    padding: 80px;
-    width: 100%;
-  }
-  
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #ffff;
+  height: 100%;
+  width: 100%;
+  background-image: url('RMBL.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
-  .container {
-    display: flex;
-    background-image: url("RMBL.jpg");
-    background-size: cover;
-  }
 
-  .container p {
-    margin: 6px;
-  }
+header {
+	padding: 50px;
+	text-align: center;
+}
 
-  .container p a {
-    padding-right: 12px;
-    color: #949494;
-    text-decoration: none;
-  }   
+h1 {
+	margin: 0;
+	font-size: 36px;
+	color: #ffff;
+	font-family: Helvetica, Arial, sans-serif;
+}
 
-  .title {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-  }
+main {
+	margin: 50px;
+  max-width: 800px;
+  margin: 0 auto; /* This centers the container horizontally */
+  padding: 50px 40px;
 
-  .title p {
-    color: #949494;
-  }
+  background-color: rgba(0, 0, 0, 0.65); /* black color with 50% opacity */
+}
 
-  .content {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  main {
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
-  }
-  
-  footer {
-    color: #565656;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    font-size: 8px;
-    height: 50px;
-  }
-  
-  footer p {
-    margin: 0;
-  }
-  
+section {
+	margin-bottom: 40px;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #ffff;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+a {
+	color: #9d9d9d;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+.content {
+  display: flex;
+	flex-wrap: wrap;
+}
+
+.title {
+  flex: 1;
+  padding: 10px;
+}
+
+.bio {
+  flex: 2;
+  padding: 10px;
+  min-width: 200px;
+}
