@@ -33,7 +33,8 @@
     flowers.push({ x, type: flowerTypes[flowers.length % 4] });
 
   function makeBee(x, vx) {
-    return { x, y: 0, vx, state: 'flying', targetFlower: null, visitTimer: 0, wingFrame: 0 };
+    const cruiseY = Math.floor(Math.random() * 3);
+    return { x, y: cruiseY, vx, cruiseY, state: 'flying', targetFlower: null, visitTimer: 0, wingFrame: 0 };
   }
   const spread = Math.floor(COLS / 5);
   const bees = [
@@ -72,7 +73,7 @@
     } else if (b.state === 'visiting') {
       if (--b.visitTimer <= 0) b.state = 'ascending';
     } else if (b.state === 'ascending') {
-      if (b.y > 0) b.y--;
+      if (b.y > b.cruiseY) b.y--;
       else { b.state = 'flying'; b.targetFlower = null; b.vx = Math.random() < 0.5 ? 1 : -1; }
     }
   }
