@@ -94,3 +94,21 @@ img {
   padding: 10px;
   min-width: 200px;
 }
+
+footer {
+  margin-top: 48px;
+  padding: 0 40px;
+}
+
+#garden {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #555;
+  overflow: hidden;
+  white-space: pre;
+  pointer-events: none;
+  user-select: none;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 16px;
+}
