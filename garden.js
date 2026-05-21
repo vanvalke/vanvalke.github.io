@@ -1,8 +1,25 @@
 (function () {
-  const COLS = 90, ROWS = 8;
+  const ROWS = 8;
   const GROUND_ROW = 7;
   const STEM_ROW = 6;
   const VISIT_Y = 4;
+
+  // Insert pre into DOM first so we can measure its width
+  const footer = document.createElement('footer');
+  footer.setAttribute('aria-label', 'decorative garden animation');
+  const pre = document.createElement('pre');
+  pre.id = 'garden';
+  pre.setAttribute('aria-hidden', 'true');
+  footer.appendChild(pre);
+  document.querySelector('main').appendChild(footer);
+
+  // Measure how many monospace characters fit across the container
+  const probe = document.createElement('span');
+  probe.textContent = 'x'.repeat(20);
+  pre.appendChild(probe);
+  const charWidth = probe.getBoundingClientRect().width / 20;
+  pre.removeChild(probe);
+  const COLS = Math.max(60, Math.floor(pre.getBoundingClientRect().width / charWidth));
 
   const flowerTypes = [
     { rows: ['(o)', ' | '] },
@@ -18,7 +35,13 @@
   function makeBee(x, vx) {
     return { x, y: 0, vx, state: 'flying', targetFlower: null, visitTimer: 0, wingFrame: 0 };
   }
-  const bees = [makeBee(3, 1), makeBee(25, -1), makeBee(55, 1), makeBee(80, -1)];
+  const spread = Math.floor(COLS / 5);
+  const bees = [
+    makeBee(spread * 0 + 3, 1),
+    makeBee(spread * 1 + 3, -1),
+    makeBee(spread * 3 + 3, 1),
+    makeBee(spread * 4 + 3, -1),
+  ];
 
   const SPRITES = { flyA: 'v(o.o)v', flyB: '^(o.o)^', landed: '-(o.o)-' };
 
@@ -54,7 +77,7 @@
     }
   }
 
-  function render(pre) {
+  function render() {
     const grid = Array.from({ length: ROWS }, () => Array(COLS).fill(' '));
     const w = (row, col, str) => {
       if (row < 0 || row >= ROWS) return;
@@ -71,13 +94,5 @@
     pre.textContent = grid.map(row => row.join('')).join('\n');
   }
 
-  const footer = document.createElement('footer');
-  footer.setAttribute('aria-label', 'decorative garden animation');
-  const pre = document.createElement('pre');
-  pre.id = 'garden';
-  pre.setAttribute('aria-hidden', 'true');
-  footer.appendChild(pre);
-  document.querySelector('main').appendChild(footer);
-
-  setInterval(() => { bees.forEach(updateBee); render(pre); }, 150);
+  setInterval(() => { bees.forEach(updateBee); render(); }, 150);
 })();
