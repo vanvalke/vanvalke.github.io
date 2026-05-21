@@ -1,8 +1,8 @@
 (function () {
-  const COLS = 80, ROWS = 5;
-  const GROUND_ROW = 4;
-  const STEM_ROW = 3;
-  const VISIT_Y = 1;
+  const COLS = 90, ROWS = 8;
+  const GROUND_ROW = 7;
+  const STEM_ROW = 6;
+  const VISIT_Y = 4;
 
   const flowerTypes = [
     { rows: ['(o)', ' | '] },
@@ -12,13 +12,13 @@
   ];
 
   const flowers = [];
-  for (let x = 2; x < COLS - 4; x += 9)
+  for (let x = 2; x < COLS - 4; x += 8)
     flowers.push({ x, type: flowerTypes[flowers.length % 4] });
 
   function makeBee(x, vx) {
     return { x, y: 0, vx, state: 'flying', targetFlower: null, visitTimer: 0, wingFrame: 0 };
   }
-  const bees = [makeBee(5, 1), makeBee(40, -1), makeBee(70, 1)];
+  const bees = [makeBee(3, 1), makeBee(25, -1), makeBee(55, 1), makeBee(80, -1)];
 
   const SPRITES = { flyA: 'v(o.o)v', flyB: '^(o.o)^', landed: '-(o.o)-' };
 
