@@ -9,6 +9,7 @@
   footer.setAttribute('aria-label', 'decorative garden animation');
   const pre = document.createElement('pre');
   pre.id = 'garden';
+  pre.classList.add('animation');
   pre.setAttribute('aria-hidden', 'true');
   footer.appendChild(pre);
   document.querySelector('main').appendChild(footer);

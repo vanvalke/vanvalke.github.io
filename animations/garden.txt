@@ -1,0 +1,27 @@
+GARDEN ANIMATION — page 1 footer
+=================================
+
+FLOWER TYPES
+------------
+
+Type 1:       Type 2:       Type 3:       Type 4:
+  (o)           \*/           \^/          * * *
+   |             |            (o)           \|/
+                               |             |
+
+
+BEE SPRITES
+-----------
+
+Flying A:     Flying B:     Landed:
+v(o.o)v       ^(o.o)^       -(o.o)-
+
+
+BEE STATES
+----------
+
+flying → descending → visiting → ascending → flying
+
+  cruising at y=0,1, or 2
+  descends to y=4 to visit a flower
+  sits for 8–16 ticks, then ascends back

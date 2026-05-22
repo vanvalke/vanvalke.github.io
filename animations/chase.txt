@@ -1,0 +1,35 @@
+CHASE ANIMATION — page 2 footer
+================================
+
+BEE SPRITES
+-----------
+
+Frame A:      Frame B:
+v(o.o)v       ^(o.o)^
+
+
+PERSON — facing right
+---------------------
+
+Frame A:                  Frame B:
+        ()                        ()
+   o --/                     o --/
+  -|                         \|
+  / \                         /\
+
+Person facing left:
+()                        ()
+  \-- o                     \-- o
+     -|                        \|
+    / \                          /\
+
+
+FULL SCENE EXAMPLE
+------------------
+
+     v(o.o)v
+()
+  \-- o
+     -|
+    / \
+_____________________________________________

@@ -8,6 +8,7 @@
 
   const pre = document.createElement('pre');
   pre.id = 'chase';
+  pre.classList.add('animation');
   pre.setAttribute('aria-hidden', 'true');
   document.getElementById('publications').appendChild(pre);
 
